@@ -1,0 +1,29 @@
+
+#button_1{
+    width:100%;
+}
+
+ion-content{
+    text-align: center;
+}
+
+.input{
+    
+    margin: 0;
+
+}
+#lastDivider{
+    margin-bottom:20px;
+}
+
+#head{
+    background-color:#283593;
+    
+}
+
+// ion-card-header{
+//     color: map-get($colors, primary);
+// }
+#unsuccessful {
+    color:map-get($colors, danger);
+}
