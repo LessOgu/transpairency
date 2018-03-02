@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>createaccount</ion-title>
+    <ion-title>Account Creation Page</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,16 +15,49 @@
 
 <ion-content padding>
 
+  <!-- This part of the code brings in the icon for the create account page -->
+  <ion-card>
+    <ion-card-content >
+      <!-- This next line will tell the program where to find the pic to display and tell it
+         what to display if the pic isn't found. Apparently, it needs to be in the build
+        folder specifically to work-->
+        <!-- Still trying to get the sizing down for the pic to shrink it -->
+      <img src="build/images/img1.png" alt="Where's the Pic?" height="100" width="100" align="middle">
+      <img text-align: center>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- The following code will create the input fields for the user for their account -->
   <ion-item>
-    <ion-label floating>Email</ion-label>
+    <ion-label color="primary">First Name</ion-label>
+    <ion-input placeholder="Enter Your First Name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">Last Name</ion-label>
+    <ion-input placeholder="Enter Your Last Name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">Company</ion-label>
+    <ion-input placeholder="Enter the Name of Your Company"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" floating>Email</ion-label>
     <ion-input type ="email" [(ngModel)]="user.email"></ion-input>
   </ion-item>
 
   <ion-item>
-      <ion-label floating>Password</ion-label>
+      <ion-label color="primary" floating>Password</ion-label>
       <ion-input type ="password" [(ngModel)]= "user.password"></ion-input>
   </ion-item>
 
-  <button ion-button block color="primary" id = "hello" (click)="register(user)">Create Account</button>
+  <ion-item>
+      <ion-label color="primary" floating>Confirm Password</ion-label>
+      <ion-input type ="password" [(ngModel)]= "user.password"></ion-input>
+  </ion-item>
+
+  <button ion-button block color="primary" id = "hello" (click)="register(user)">Create Your Profile</button>
 
 </ion-content>
